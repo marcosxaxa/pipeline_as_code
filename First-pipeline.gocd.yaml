@@ -10,7 +10,7 @@ pipelines:
         git: https://github.com/marcosxaxa/pipeline_as_code.git
         username: marcosxaxa
         shallow_clone: false
-        auto_update: true
+        auto_update: false
         branch: main
         encrypted_password: AES:d8+vuBSU36/ojJialr0VHA==:+Z3ckBhBcxwcYwjCwkHs2g==
     stages:
