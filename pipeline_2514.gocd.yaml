@@ -1,0 +1,32 @@
+format_version: 10
+pipelines:
+  pipeline2514:
+    group: defaultGroup
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git-69d06b3:
+        git: https://github.com/marcosxaxa/pipeline_as_code.git
+        username: marcosxaxa
+        shallow_clone: false
+        auto_update: false
+        branch: main
+        encrypted_password: AES:d8+vuBSU36/ojJialr0VHA==:+Z3ckBhBcxwcYwjCwkHs2g==
+    stages:
+    - build:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          build:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - Building artifact
+                command: echo
+                run_if: passed
